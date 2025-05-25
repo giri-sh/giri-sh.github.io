@@ -1,11 +1,4 @@
 ---
 layout: home
-title: Girish's Blog
+title: Home
 ---
-
-Welcome to my blog!  
-Check out [About Me](/about/).
-
-## Blog
-
-Below are my latest posts.
