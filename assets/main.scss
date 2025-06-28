@@ -1,0 +1,15 @@
+---
+---
+
+@import "{{ site.theme }}"; // Imports the Minima theme styles
+
+// Customizations
+body {
+  background-color: #008080; // Teal
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+// Optionally, ensure headings also use the monospace font if not inheriting properly
+h1, h2, h3, h4, h5, h6 {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
