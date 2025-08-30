@@ -1,4 +1,67 @@
+# Site settings
 title: giri-sh
-description: Random Stuff from Random Timeline
+description: "Exploring thoughts and research across the digital cosmos"
 author: Girish
-theme: minima
+url: "https://giri-sh.github.io"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: 
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Permalink structure
+permalink: /:year/:month/:day/:title/
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:collection/:year/:month/:day/:title/
+
+# Site configuration
+timezone: UTC
+encoding: utf-8
+
+# Social links (optional)
+social:
+  github: giri-sh
+  
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+
+# Include custom assets
+include:
+  - _pages
+
+# Default values
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: false
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+# Custom theme settings
+space_theme:
+  enable_smooth_scroll: true
+  show_navigation_hints: true
+  animation_duration: 1000

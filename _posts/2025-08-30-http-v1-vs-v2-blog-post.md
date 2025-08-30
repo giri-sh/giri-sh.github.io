@@ -1,3 +1,10 @@
+---
+layout: post
+title: "HTTP/1.1 vs. HTTP/2: A Beginner's Guide to a Faster Web"
+date: 2025-08-30
+categories: web-development http networking
+---
+
 # HTTP/1.1 vs. HTTP/2: A Beginner's Guide to a Faster Web
 
 Welcome to our deep dive into the evolution of the Hypertext Transfer Protocol (HTTP), the backbone of the World Wide Web. If you're new to engineering concepts, don't worry! We'll break down the differences between HTTP/1.1 and HTTP/2 in a simple, easy-to-understand way. By the end of this post, you'll understand why this change was so important and how it makes your browsing experience faster and more efficient.
