@@ -7,6 +7,9 @@ _site/
 # Compiled CSS for static serving (source is main.scss)
 assets/main.css
 
+# Static HTML demo files (Jekyll generates these)
+index.html
+
 # Ruby/Bundler
 vendor/
 .bundle/
