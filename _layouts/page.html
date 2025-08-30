@@ -1,0 +1,79 @@
+---
+layout: default
+---
+
+<article class="page-content-wrapper">
+  <header class="page-header">
+    <h1 class="page-title">{{ page.title | escape }}</h1>
+  </header>
+
+  <div class="page-content">
+    {{ content }}
+  </div>
+
+  <div class="page-navigation">
+    <a class="nav-link back-to-universe" href="{{ "/" | relative_url }}">
+      🚀 Back to Universe
+    </a>
+  </div>
+</article>
+
+<style>
+.page-content-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(26, 26, 46, 0.8);
+  border-radius: 15px;
+  padding: 3rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(77, 208, 225, 0.3);
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(77, 208, 225, 0.3);
+}
+
+.page-title {
+  font-size: 2.5rem;
+  color: #00d4ff;
+  text-shadow: 0 0 10px #4dd0e1;
+  margin-bottom: 1rem;
+}
+
+.page-content {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+}
+
+.page-content h1, .page-content h2, .page-content h3, .page-content h4, .page-content h5, .page-content h6 {
+  color: #00d4ff;
+  margin: 2rem 0 1rem 0;
+  text-shadow: 0 0 5px #4dd0e1;
+}
+
+.page-content p {
+  margin-bottom: 1.5rem;
+}
+
+.page-content a {
+  color: #00d4ff;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 212, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.page-content a:hover {
+  border-bottom-color: #00d4ff;
+  text-shadow: 0 0 5px #4dd0e1;
+}
+
+.page-navigation {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(77, 208, 225, 0.3);
+}
+</style>

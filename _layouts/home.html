@@ -1,0 +1,47 @@
+---
+layout: default
+---
+
+<div class="space-container">
+  <div class="intro-section">
+    <h1 class="space-title">{{ site.title }}</h1>
+    <p class="space-subtitle">{{ site.description }}</p>
+    <div class="navigation-hint">
+      <p>🚀 Scroll to explore the universe of thoughts</p>
+    </div>
+  </div>
+
+  <div class="posts-universe" id="posts-universe">
+    {% for post in site.posts %}
+      <article class="post-planet" data-post-index="{{ forloop.index0 }}">
+        <div class="planet-surface">
+          <div class="planet-content">
+            <h2 class="post-title">
+              <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+            </h2>
+            <p class="post-meta">
+              <time datetime="{{ post.date | date_to_xmlschema }}">
+                {{ post.date | date: "%B %d, %Y" }}
+              </time>
+            </p>
+            <div class="post-excerpt">
+              {{ post.excerpt | strip_html | truncatewords: 30 }}
+            </div>
+            <a href="{{ post.url | relative_url }}" class="read-more">
+              Explore this planet →
+            </a>
+          </div>
+        </div>
+        <div class="planet-glow"></div>
+        <div class="planet-rings"></div>
+      </article>
+    {% endfor %}
+  </div>
+
+  {% if site.posts.size == 0 %}
+    <div class="empty-universe">
+      <h2>The universe is waiting...</h2>
+      <p>No posts found. Create your first post to populate this space!</p>
+    </div>
+  {% endif %}
+</div>
