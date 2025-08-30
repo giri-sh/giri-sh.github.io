@@ -1,4 +1,8 @@
-# HTTP/1.1 vs. HTTP/2: A Beginner's Guide to a Faster Web
+---
+layout: post
+title: "HTTP/1.1 vs. HTTP/2: A Beginner's Guide to a Faster Web"
+date: 2025-08-29
+---
 
 Welcome to our deep dive into the evolution of the Hypertext Transfer Protocol (HTTP), the backbone of the World Wide Web. If you're new to engineering concepts, don't worry! We'll break down the differences between HTTP/1.1 and HTTP/2 in a simple, easy-to-understand way. By the end of this post, you'll understand why this change was so important and how it makes your browsing experience faster and more efficient.
 
@@ -21,7 +25,7 @@ Imagine you're at a grocery store with one checkout lane. Even if you only have 
 With HTTP/1.1, the browser can send multiple requests over a single connection, but it must wait for each response to complete before the next one can be processed. If a single request for a large image or a slow script gets stuck, it blocks all the other requests behind it.
 
 ![The Internet Protocol Stack](https://assets.digitalocean.com/articles/cart_63893/Protocol_Stack.png)
-*A diagram showing the layers of internet communication. HTTP is at the application layer.*
+*A diagram showing the layers of internet communication. HTTP is at the application layer. Image credit: [DigitalOcean](https://www.digitalocean.com/community/tutorials/http-1-1-vs-http-2-what-s-the-difference)*
 
 To get around this, browsers started opening multiple connections to the same server (typically up to six). But this has its own drawbacks, including increased resource usage on both the client and the server.
 
@@ -57,7 +61,7 @@ This is the star of the show. With HTTP/2, a single connection can handle multip
 Remember our grocery store analogy? With multiplexing, it's like having multiple checkout lanes open for a single line of customers. If one person has a huge cart, others can still check out their smaller items in other lanes without waiting.
 
 ![HTTP/2 Streams, Messages, and Frames](https://assets.digitalocean.com/articles/cart_63893/Streams_Frames.png)
-*In HTTP/2, a single connection is divided into multiple streams, each carrying messages broken into frames.*
+*In HTTP/2, a single connection is divided into multiple streams, each carrying messages broken into frames. Image credit: [DigitalOcean](https://www.digitalocean.com/community/tutorials/http-1-1-vs-http-2-what-s-the-difference)*
 
 In HTTP/2, each request/response pair is assigned its own **stream**. These streams are broken into frames, which are interleaved and sent over a single TCP connection. The browser can then reassemble the frames from different streams as they arrive, so a slow request no longer blocks others.
 
@@ -84,12 +88,12 @@ With so many streams happening at once, how does the browser decide which resour
 For example, a browser can tell the server that the main content of a page is more important than a banner ad at the bottom. The server can then use this information to allocate more resources to the higher-priority streams.
 
 ![HTTP/2 Stream Prioritization](https://assets.digitalocean.com/articles/cart_63893/Stream_Priority2.png)
-*An example of how streams can be prioritized with different weights and dependencies.*
+*An example of how streams can be prioritized with different weights and dependencies. Image credit: [DigitalOcean](https://www.digitalocean.com/community/tutorials/http-1-1-vs-http-2-what-s-the-difference)*
 
 This creates a **dependency tree** that helps the server optimize the delivery of resources, further improving the perceived performance of the website.
 
 ![HTTP/2 Dependency Tree](https://assets.digitalocean.com/articles/cart_63893/Dependency_Tree.png)
-*A visual representation of how stream dependencies and weights can be structured.*
+*A visual representation of how stream dependencies and weights can be structured. Image credit: [DigitalOcean](https://www.digitalocean.com/community/tutorials/http-1-1-vs-http-2-what-s-the-difference)*
 
 ### How a Server Handles HTTP/1.1 vs. HTTP/2
 
